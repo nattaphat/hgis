@@ -1,0 +1,4 @@
+haii_igis:
+    resource: "@HaiiIgisBundle/Resources/config/routing.yml"
+    prefix:   /
+

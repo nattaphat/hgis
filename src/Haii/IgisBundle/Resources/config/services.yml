@@ -1,0 +1,7 @@
+parameters:
+#    haii_igis.example.class: Haii\IgisBundle\Example
+
+services:
+#    haii_igis.example:
+#        class: %haii_igis.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
