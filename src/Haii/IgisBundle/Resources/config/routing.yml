@@ -3,5 +3,13 @@ igis_homepage:
     defaults: { _controller: HaiiIgisBundle:Default:index }
 
 login_check:
-    pattern:  /logincheck/
+    pattern:  /admin/logincheck/
     defaults: { _controller: HaiiIgisBundle:Security:loginCheck }
+    
+add_userform:
+    pattern:  /admin/adduserform/
+    defaults: { _controller: HaiiIgisBundle:Default:addUserForm }
+    
+process_adduser:
+    pattern:  /admin/adduser/
+    defaults: { _controller: HaiiIgisBundle:Default:addUser }
