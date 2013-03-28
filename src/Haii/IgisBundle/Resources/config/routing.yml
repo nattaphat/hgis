@@ -1,3 +1,7 @@
-haii_igis_homepage:
-    pattern:  /hello/{name}
+igis_homepage:
+    pattern:  /admin/
     defaults: { _controller: HaiiIgisBundle:Default:index }
+
+login_check:
+    pattern:  /logincheck/
+    defaults: { _controller: HaiiIgisBundle:Security:loginCheck }
