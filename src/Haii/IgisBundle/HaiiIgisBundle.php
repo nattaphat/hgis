@@ -1,5 +1,5 @@
 <?php
-
+//src/Haii/HaiiIgisBundle.php
 namespace Haii\IgisBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;

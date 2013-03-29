@@ -8,6 +8,7 @@
 {% block title 'Backoffice:IGIS' %}
 
 {% block body %}
+{# {% block fos_user_content %}{% endblock fos_user_content %}#}
     {% for flashMessage in app.session.flashbag.get('notice') %}
         <div class="flash-message">
             <em>Notice</em>: {{ flashMessage }}
