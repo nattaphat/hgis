@@ -1,0 +1,58 @@
+{% extends "HaiiIgisBundle::Igis/layout.html.twig" %}
+
+{% block nav %}
+	<dl class="sub-nav">
+	  <dt>Filter:</dt>
+	  <dd class="active"><a href="#">Add User</a></dd>
+	  <dd><a href="#">Active</a></dd>
+	  <dd><a href="#">Pending</a></dd>
+	  <dd><a href="#">Suspended</a></dd>
+	</dl>
+{% endblock %}
+
+{% block content %}
+    <h3>Add User</h3>
+        <div class="content">
+         <form action="{{ path('process_adduser') }}" method="post" {{ form_enctype(form) }}>
+           <div class="row collapse">
+             <div class="large-2 columns">
+               <label class="inline">User Name</label>
+             </div>
+             <div class="large-10 columns">
+               <input type="text" id="yourName" placeholder="Jane Smith">
+             </div>
+           </div>
+		   <div class="row collapse">
+             <div class="large-2 columns">
+               <label class="inline">Password</label>
+             </div>
+             <div class="large-10 columns">
+               <input type="text" id="yourName" placeholder="********">
+             </div>
+           </div>
+		   <div class="row collapse">
+             <div class="large-2 columns">
+               <label class="inline">Retype Password</label>
+             </div>
+             <div class="large-10 columns">
+               <input type="text" id="yourName" placeholder="********">
+             </div>
+           </div>
+           <div class="row collapse">
+             <div class="large-2 columns">
+               <label class="inline"> Your Email</label>
+             </div>
+             <div class="large-10 columns">
+               <input type="text" id="yourEmail" placeholder="admin@haii.or.th">
+             </div>
+			 <div class="large-2 columns">
+               <label class="inline">Active ?</label>
+             </div>
+			 <div class="large-10 columns">
+               <input type="checkbox" id="yourEmail">
+             </div>
+           </div>
+           <button type="submit" class="radius button">Add</button>
+         </form>
+       </div>
+{% endblock %}
