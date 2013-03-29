@@ -2,6 +2,10 @@ haii_igis:
     resource: "@HaiiIgisBundle/Resources/config/routing.yml"
     prefix:   /
 
-igis_login:
-    pattern:  /
-    defaults: { _controller: HaiiIgisBundle:Security:login }
+#igis_login:
+#    pattern:  /
+#    defaults: { _controller: HaiiIgisBundle:Security:login }
+
+#_user_bundle:
+#    resource: "@UserBundle/Resources/config/routing.yml"
+    
