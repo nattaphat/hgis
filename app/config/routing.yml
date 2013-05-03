@@ -1,6 +1,10 @@
-haii_igis:
-    resource: "@HaiiIgisBundle/Resources/config/routing.yml"
+haii_hgis:
+    resource: "@HaiiHgisBundle/Resources/config/routing.yml"
     prefix:   /
+
+#haii_igis:
+#    resource: "@HaiiIgisBundle/Resources/config/routing.yml"
+#    prefix:   /
 
 #igis_login:
 #    pattern:  /

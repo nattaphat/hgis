@@ -19,9 +19,10 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-            new Haii\IgisBundle\HaiiIgisBundle(),
+            //new Haii\IgisBundle\HaiiIgisBundle(),
                 
             new FOS\UserBundle\FOSUserBundle(),
+            new Haii\HgisBundle\HaiiHgisBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
