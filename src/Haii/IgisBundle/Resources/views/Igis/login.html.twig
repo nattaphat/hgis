@@ -1,51 +1,22 @@
-{% extends 'HaiiIgisBundle::default.html.twig' %}
+{% extends 'HaiiIgisBundle::defaultlogin.html.twig' %}
 
-{% block head %}
-    <link rel="icon" sizes="16x16" href="{{ asset('bundles/haii/img/favicon.ico') }}" />
-    <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css') }}" />
-{% endblock %}
+{% block fos_user_content %}
+{% if error %}
+    <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+{% endif %}
 
-{% block title 'Backoffice:IGIS' %}
+<form action="{{ path("fos_user_security_check") }}" method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 
-{% block body %}
-{# {% block fos_user_content %}{% endblock fos_user_content %}#}
-    {% for flashMessage in app.session.flashbag.get('notice') %}
-        <div class="flash-message">
-            <em>Notice</em>: {{ flashMessage }}
-        </div>
-    {% endfor %}
+    <label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
 
+    <label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
+    <input type="password" id="password" name="_password" required="required" />
 
-    <div class="block">
-        {% block content %}
-            <h1 class="title">Login</h1>
-        
+    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</label>
 
-        
-            {% if error %}
-                <div class="error">{{ error.message }}</div>
-            {% endif %}
-        
-            <form action="{{ path("login_check") }}" method="post" id="login">
-                <div>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="_username" value="{{ last_username }}" />
-                </div>
-        
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="_password" />
-                </div>
-        
-                <button type="submit" class="sf-button">
-                    <span class="border-l">
-                        <span class="border-r">
-                            <span class="btn-bg">Login</span>
-                        </span>
-                    </span>
-                </button>
-            </form>
-        {% endblock %}
-    </div>
-
-{% endblock %}
+    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
+</form>
+{% endblock fos_user_content %}
