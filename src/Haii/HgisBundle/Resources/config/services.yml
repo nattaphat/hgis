@@ -1,0 +1,7 @@
+parameters:
+#    haii_hgis.example.class: Haii\HgisBundle\Example
+
+services:
+#    haii_hgis.example:
+#        class: %haii_hgis.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
