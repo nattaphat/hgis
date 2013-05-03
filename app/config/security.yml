@@ -21,6 +21,7 @@ security:
                 check_path: /login_check
                 login_path: /login
                 provider: fos_userbundle
+                default_target_path: / #route when login passed
             logout:
                 path:   /logout
                 target: /
@@ -29,4 +30,4 @@ security:
             #    realm: "Secured Demo Area"
 
     access_control:
-        - { path: ^/admin, roles: ROLE_SUPER_ADMIN }
+        #- { path: ^/admin, roles: ROLE_SUPER_ADMIN }
