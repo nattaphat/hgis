@@ -1,7 +1,11 @@
 haii_hgis_homepage:
     pattern:  /hellohgis/{name}
     defaults: { _controller: HaiiHgisBundle:Default:index }
-
+    
+haii_hgis_email:
+    pattern:  /hemail
+    defaults: { _controller: HaiiHgisBundle:Default:email }
+    
 # app/config/routing.yml
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

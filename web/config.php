@@ -40,7 +40,7 @@ $minorProblems = $symfonyRequirements->getFailedRecommendations();
                 <div class="search">
                   <form method="get" action="http://symfony.com/search">
                     <div class="form-row">
-
+                      
                       <label for="search-id">
                           <img src="bundles/framework/images/grey_magnifier.png" alt="Search on Symfony website" />
                       </label>

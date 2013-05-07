@@ -66,9 +66,28 @@ swiftmailer:
     host:      %mailer_host%
     username:  %mailer_user%
     password:  %mailer_password%
+    encryption: ssl
+    auth_mode:  login
     spool:     { type: memory }
 
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: Haii\HgisBundle\Entity\User
+    registration: # for enable confirm when register by e-mail and forgot password
+        confirmation:
+            enabled:    true
+            from_email:
+                address:        nhc.cuse@gmail.com
+                sender_name:    NHC Demo Registration
+    service:
+        mailer: fos_user.mailer.twig_swift
+    from_email:
+        address:        nhc.cuse@gmail.com
+        sender_name:    NHC Demo App
+    resetting:
+        email:
+            from_email:
+                address:        nhc.cuse@gmail.com
+                sender_name:    NHC Demo Resetting
+#            template: HaiiHgisBundle:User:resetting.email.twig
