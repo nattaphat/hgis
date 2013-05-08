@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+     {% block head %}
+        <title>{% block title 'Backoffice:IGIS' %}</title>
+        
+        {# /haii/hgis/web/favicon.ico #}
+        <link rel="icon" sizes="16x16" href="{{ asset('bundles/haii/img/nhc-ico.ico') }}" />
+        {% block stylesheets %}
+            {# Core CSS #}
+            <link rel="stylesheet" href="{{ asset('bundles/haii/foundation/css/normalize.css') }}" />
+            <link rel="stylesheet" href="{{ asset('bundles/haii/foundation/css/foundation.css') }}" />
+        {% endblock %}
+        
+        {% block javascripts %}
+            {# Core JavaScript #}
+            <script type="text/javascript" src="{{ asset('bundles/haii/foundation/js/vendor/custom.modernizr.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/haii/foundation/js/vendor/jquery.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/haii/foundation/js/foundation.min.js') }}"></script>
+        {% endblock %}
+        <script>
+            $(document).foundation();
+        </script>
+    {% endblock %}
+    </head>
+    <body class="antialiased">
+       <nav class="top-bar">
+          <ul class="title-area">
+            <!-- Title Area -->
+            <li class="name">
+              <h1><a href="{{ path('haii_hgis_test') }}">BackOffice</a></h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          </ul>
+          
+          <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li class="divider"></li>
+              <li><a href="{{ path('fos_user_registration_register') }}">Register</a></li>
+              <li class="divider"></li>
+              <li><a href="{{ path('fos_user_change_password') }}">Change Password</a></li>
+              <li class="divider"></li>
+              <li><a href="{{ path('fos_user_profile_show') }}">Profile</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Hello! {{ user.username }}</a></li>
+              <li class="divider"></li>
+              <li class="has-form">
+                <a href="{{ path('fos_user_security_logout') }}" class="button">Log Out</a>
+              </li>
+            </ul>
+          </section>
+        </nav>
+        
+        <div class="row">
+          <div class="large-12 columns">
+            {% block top_header %}
+                <h1 class="docs header"><a href="{{ path('haii_hgis_test') }}">NHC</a></h1>
+                <!-- <h6 class="docs subheader"><a href="http://foundation.zurb.com/old-docs/f3">Want F3 Docs?</a></h6> -->
+                <hr>
+            {% endblock %}
+          </div>
+        </div>
+      
+      <div class="row">
+      <div class="large-9 push-3 columns">
+    
+        <div class="row">
+          <div class="large-12 columns">
+    		  {% block nav %}{% endblock %}
+              {% block content %}{% endblock %}
+          </div>
+        </div>
+       </div>
+       
+      {% block slide %}{% endblock %}
+    
+    </body>
+</html>

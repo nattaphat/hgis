@@ -21,13 +21,13 @@ security:
                 check_path: /login_check
                 login_path: /login
                 provider: fos_userbundle
-                default_target_path: / #route when login passed
+                default_target_path: /home #route when login passed
             logout:
                 path:   /logout
-                target: /
+                target: /login
             anonymous: ~
             #http_basic:
             #    realm: "Secured Demo Area"
 
-    access_control:
-        #- { path: ^/admin, roles: ROLE_SUPER_ADMIN }
+#    access_control:
+#        - { path: ^/home, roles: ROLE_SUPER_ADMIN }
