@@ -1,7 +1,11 @@
 haii_hgis_homepage:
     pattern:  /hellohgis/{name}
     defaults: { _controller: HaiiHgisBundle:Default:index }
-    
+
+haii_hgis_test:
+    pattern:  /home/
+    defaults: { _controller: HaiiHgisBundle:Default:home }
+        
 haii_hgis_email:
     pattern:  /hemail
     defaults: { _controller: HaiiHgisBundle:Default:email }

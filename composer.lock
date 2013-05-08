@@ -603,19 +603,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "4f5e0d23dd5e98cafa22b214cdb754566180ab94"
+                "reference": "b77fc8b35f76f523c219224afc8f068cdb9baf24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/4f5e0d23dd5e98cafa22b214cdb754566180ab94",
-                "reference": "4f5e0d23dd5e98cafa22b214cdb754566180ab94",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/b77fc8b35f76f523c219224afc8f068cdb9baf24",
+                "reference": "b77fc8b35f76f523c219224afc8f068cdb9baf24",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/form": ">=2.1,<2.3-dev",
-                "symfony/framework-bundle": ">=2.1,<2.3-dev",
-                "symfony/security-bundle": ">=2.1,<2.3-dev"
+                "symfony/form": ">=2.1,<2.4-dev",
+                "symfony/framework-bundle": ">=2.1,<2.4-dev",
+                "symfony/security-bundle": ">=2.1,<2.4-dev"
             },
             "require-dev": {
                 "doctrine/doctrine-bundle": "*",
@@ -660,7 +660,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2013-04-27 12:31:50"
+            "time": "2013-05-04 01:14:40"
         },
         {
             "name": "jdorn/sql-formatter",

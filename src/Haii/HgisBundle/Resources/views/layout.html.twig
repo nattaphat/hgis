@@ -1,10 +1,16 @@
 {% extends "TwigBundle::layout.html.twig" %}
 
 {% block head %}
-    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+    <link rel="icon" sizes="16x16" href="{{ asset('bundles/haii/img/nhc-ico.ico') }}" />
     <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css') }}" />
 {% endblock %}
 
+{% block nhc_logo %}
+    <div class="header-logo">
+        <img src="{{ asset('bundles/haii/img/NHC_logo_Final.png') }}" width="200px" height="125px" alt="NHC" />
+    </div>
+{% endblock %}
+                
 {% block title 'Login Page' %}
 
 
